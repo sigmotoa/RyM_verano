@@ -1,6 +1,5 @@
 package com.sigmotoa.rickymorty_verano
 
-import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -55,4 +54,14 @@ fun GreetingPreviewSigmotoa() {
 @Composable
 fun PreviewKarol() {
     Greeting(name = "Karol Vane")
+}
+
+@Preview(
+    device = "id:wearos_large_round", showSystemUi = true, showBackground = true,
+    backgroundColor = 0xFF4E3CE2,
+    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_WATCH
+)
+@Composable
+fun PreviewJesus() {
+    Greeting(name = "JesusG")
 }
