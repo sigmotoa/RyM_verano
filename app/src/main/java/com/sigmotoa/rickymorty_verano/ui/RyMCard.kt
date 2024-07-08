@@ -3,6 +3,7 @@ package com.sigmotoa.rickymorty_verano.ui
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -48,9 +49,28 @@ fun SCard(modifier: Modifier = Modifier) {
     }
 }
 
+@Composable
+fun JGCard(modifier: Modifier = Modifier) {
+    ElevatedCard(
+        colors = CardDefaults.cardColors(containerColor = Color.Blue),
+        modifier = Modifier
+            .width(200.dp)
+            .height(240.dp)
+    ) {
+        Text(
+            "Millonarios FC",
+            fontStyle = FontStyle.Italic,
+            fontSize = 19.sp,
+            textAlign = TextAlign.Center
+        )
+        Image(painterResource(R.drawable.escudomillos), contentDescription = "MillonariosFC")
+        Text("El más grande.", textAlign = TextAlign.Center)
+    }
+}
+
 
 @Preview(showSystemUi = true, showBackground = true, backgroundColor = 0xFFF3EBEB)
 @Composable
 fun PrevCard(modifier: Modifier = Modifier) {
-    SCard()
+    JGCard()
 }

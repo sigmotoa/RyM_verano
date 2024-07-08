@@ -22,6 +22,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.sigmotoa.rickymorty_verano.ui.JGCard
 import com.sigmotoa.rickymorty_verano.ui.SCard
 import com.sigmotoa.rickymorty_verano.ui.theme.RickYMorty_VeranoTheme
 
@@ -50,6 +51,7 @@ class MainActivity : ComponentActivity() {
                         item { SCard() }
                         item { SCard() }
                         item { SCard() }
+                        item { JGCard() }
                     }
 
                     //SCard()
@@ -63,7 +65,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun SBox(texto:String) {
-    Box (modifier = Modifier.fillMaxWidth().background(Color.Yellow)){
+    Box (modifier = Modifier
+        .fillMaxWidth()
+        .background(Color.Yellow)){
         Text(text = texto)
        // Text(text="Estoy en un Box")
     }
